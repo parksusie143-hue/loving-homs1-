@@ -1,0 +1,307 @@
+/* التنسيق العام */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    direction: rtl; /* لجعل الموقع من اليمين لليسار */
+}
+
+/* القائمة العلوية الضخمة (Navigation Bar) */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #c0c0c0; /* لون رمادي كما في الصورة */
+    padding: 30px 0;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-group {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-item {
+    background-color: #f8d7cc; /* اللون الوردي للأزرار */
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.nav-item:hover {
+    background-color: #f4b6a1;
+}
+
+/* حاوية الشعار في المنتصف */
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-img {
+    width: 90px;
+    height: auto;
+}
+
+.logo-text {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+    color: #444;
+}
+
+/* تنسيق محتوى الصفحات */
+.content-page {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap; /* سيظهر الخطأ في الموبايل لأن العرض ثابت */
+    margin-top: 30px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.card img, .gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* تنسيق الفيديوهات */
+.video-box {
+    margin: 40px auto;
+    max-width: 850px;
+    border: 5px solid #f8d7cc;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* تنسيق النماذج (الحجز والتواصل) */
+.styled-form {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.styled-form input, .styled-form select, .styled-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+.booking-btn {
+    background-color: #f8d7cc;
+    padding: 15px 40px;
+    border-radius: 30px;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.booking-btn:hover {
+    background-color: #333;
+    color: white;
+}
+/* تنسيق الصور في المعرض لتبدو متناسقة */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* هذا سيجعل الصور تنزل تحت بعضها إذا كانت الشاشة صغيرة، لكنه سيكشف خطأ التوافق */
+    margin-top: 30px;
+}
+
+.gallery img {
+    width: 350px;       /* عرض ثابت ومناسب للكمبيوتر */
+    height: 250px;      /* طول ثابت لتوحيد شكل الصور */
+    object-fit: cover;  /* لقص الصورة بشكل متناسق دون تمطيطها */
+    border-radius: 20px; /* زوايا دائرية لتناسب تصميم الأزرار */
+    border: 5px solid #f8d7cc; /* إطار وردي خفيف ليعطي جمالية */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* تنسيق إضافي لصفحة الحلاقة تحديداً */
+.content-page h2 {
+    color: #333;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.content-page p {
+    font-size: 20px;
+    color: #666;
+    margin-top: 20px;
+}
+/* تنسيق تذييل الصفحة (Footer) */
+.main-footer {
+    background-color: #333; /* لون غامق لتمييزه عن القائمة العلوية */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px; /* مسافة بينه وبين المحتوى */
+    width: 100%;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+/* منع قفز الهيدر وتداخله */
+body {
+    padding-top: 140px !important; /* مسافة كافية للهيدر الثابت */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: #f8f9fa;
+    padding: 10px 0;
+}
+
+/* تنسيق النفاذ في الجوال */
+@media (max-width: 768px) {
+    body { padding-top: 200px !important; }
+    .nav-group {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    .nav-item {
+        font-size: 12px;
+        padding: 5px 10px;
+    }
+    .logo-container { order: -1; margin-bottom: 10px; }
+}
+/* تنسيق الصندوق الموحد */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.styled-form {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 550px; /* عرض مناسب للصندوق */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 2px solid #f8d7cc;
+    text-align: right; /* لضمان اتجاه النص العربي */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: right;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #444;
+}
+
+.styled-form input, .styled-form select, .styled-form textarea {
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+/* زر الإرسال الموحد */
+.booking-btn {
+    background-color: #f8d7cc;
+    border: none;
+    padding: 15px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.booking-btn:hover {
+    background-color: #333;
+    color: white;
+}
+/* تنسيق الرسالة (مخفية افتراضياً) */
+.toast {
+    position: fixed;
+    bottom: -100px; /* مكانها تحت الشاشة لكي لا تظهر */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    transition: all 0.5s ease;
+    z-index: 9999;
+    opacity: 0;
+}
+
+/* الكلاس الذي يتم إضافته بالجافاسكريبت لإظهارها */
+.toast.show {
+    bottom: 30px; /* تطلع للأعلى لتظهر للمستخدم */
+    opacity: 1;
+}
+/* الرسالة تكون مخفية تماماً في البداية */
+.toast {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px); /* منزاحة للأسفل */
+    background: #333;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    z-index: 2000;
+}
+
+/* الكلاس الذي يضيفه الجافاسكريبت عند الضغط على الزر */
+.toast.show {
+    transform: translateX(-50%) translateY(0); /* تعود لمكانها */
+    opacity: 1;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>احجز الآن - Loving Homes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="settings-menu">
+        <button class="settings-btn">⋮</button>
+        <div class="settings-content">
+            <button onclick="switchLang()" id="langBtn">English</button>
+            <hr>
+            <button onclick="changeZoom('plus')">تكبير +</button>
+            <button onclick="changeZoom('minus')">تصغير -</button>
+        </div>
+    </div>
+
+    <header>
+        <nav class="navbar">
+            <div class="nav-group">
+                <a href="faq.html" class="nav-item" data-key="nav_faq">الأسئلة الشائعة</a>
+                <a href="contact.html" class="nav-item" data-key="nav_contact">تواصلوا معنا</a>
+                <a href="booking.html" class="nav-item active" data-key="nav_booking">الحجز</a>
+                <a href="about.html" class="nav-item" data-key="nav_about">عنا</a>
+            </div>
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo-img">
+                <span class="logo-text">Loving Homes</span>
+            </div>
+            <div class="nav-group">
+                <a href="index.html" class="nav-item" data-key="nav_home">الرئيسية</a>
+                <a href="facilities.html" class="nav-item" data-key="nav_fac">المرافق</a>
+                <a href="packages.html" class="nav-item" data-key="nav_pack">الحزم</a>
+                <a href="grooming.html" class="nav-item" data-key="nav_groom">صالة الحلاقة</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="content-page">
+        <h2 class="page-title" data-key="nav_booking" style="text-align: center; margin-bottom: 20px;">حجز موعد جديد</h2>
+        
+        <div class="form-container">
+            <form class="styled-form" id="bookingForm">
+                <div class="form-group">
+                    <label style="font-weight: bold; margin-bottom: 5px;">اسم الأليف</label>
+                    <input type="text" placeholder="ما اسم كلبك اللطيف؟" required>
+                </div>
+
+                <div class="form-group">
+                    <label style="font-weight: bold; margin-bottom: 5px;">نوع الخدمة</label>
+                    <select required>
+                        <option value="">اختر الخدمة المطلوبة</option>
+                        <option value="grooming">حلاقة وتنظيف</option>
+                        <option value="boarding">استضافة فندقية</option>
+                        <option value="training">تدريب وتعديل سلوك</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label style="font-weight: bold; margin-bottom: 5px;">تاريخ الحجز</label>
+                    <input type="date" required>
+                </div>
+
+                <button type="submit" class="booking-btn">تأكيد طلب الحجز</button>
+            </form>
+        </div>
+    </main>
+
+    <div id="toastNotification" class="toast">
+        <div class="toast-content">
+            <div class="toast-icon">✅</div>
+            <div class="toast-text">
+                <strong data-key="toast_title">تم!</strong>
+                <p data-key="toast_desc">تم استلام طلبك بنجاح.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-centered" style="text-align: center; padding: 20px; background: #333; color: white; margin-top: 50px;">
+        <p data-key="footer_text">جميع الحقوق محفوظة © 2026 Loving Homes - العناية بالكلاب</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

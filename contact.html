@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تواصل معنا - Loving Homes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-group">
+                <a href="faq.html" class="nav-item broken-link" data-key="nav_faq">الأسئلة الشائعة</a>
+                <a href="contact.html" class="nav-item active" data-key="nav_contact">تواصلوا معنا</a>
+                <a href="booking.html" class="nav-item" data-key="nav_booking">الحجز</a>
+                <a href="about.html" class="nav-item" data-key="nav_about">عنا</a>
+            </div>
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo" class="logo-img">
+                <span class="logo-text">Loving Homes</span>
+            </div>
+            <div class="nav-group">
+                <a href="index.html" class="nav-item" data-key="nav_home">الرئيسية</a>
+                <a href="facilities.html" class="nav-item" data-key="nav_fac">المرافق</a>
+                <a href="packages.html" class="nav-item" data-key="nav_pack">الحزم</a>
+                <a href="grooming.html" class="nav-item" data-key="nav_groom">صالة الحلاقة</a>
+            </div>
+        </nav>
+    </header>
+<main class="content-page">
+    <h2 class="page-title">نحن بانتظار رسالتك</h2>
+    
+    <div class="form-container">
+        <form class="styled-form" id="contactForm">
+            <div class="form-group">
+                <label>الاسم الكامل</label>
+                <input type="text" placeholder="الاسم الكامل" required>
+            </div>
+            
+            <div class="form-group">
+                <label>البريد الإلكتروني</label>
+                <input type="text" placeholder="البريد الإلكتروني" required>
+            </div>
+
+            <div class="form-group">
+                <label>رسالتك</label>
+                <textarea placeholder="كيف يمكننا مساعدتك؟" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" class="booking-btn">إرسال الرسالة</button>
+        </form>
+    </div>
+</main>
+
+<div id="toastNotification" class="toast">
+    <div class="toast-content">
+        <div class="toast-icon">✅</div>
+        <div class="toast-text">
+            <strong>تم الإرسال!</strong>
+            <p>شكراً لتواصلك معنا، سنرد عليك قريباً.</p>
+        </div>
+    </div>
+</div>
+    <footer class="main-footer">
+        <p data-key="footer_text">جميع الحقوق محفوظة © 2026 Loving Homes - العناية بالكلاب</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
